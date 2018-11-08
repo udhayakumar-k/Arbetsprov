@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="search app">
+    <meta name="keywords" content="search, tool, search tool">
+    <meta name="author" content="udhaya kumar">
+    <title>Search App</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <link rel="icon" href="./UI/assets/search.svg" sizes="any" type="image/svg+xml">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="./UI/assets/logo.svg">
+    </header>
+    <div class="search-input-wrapper">
+        <img src="./UI/assets/search.svg">
+        <input type="text" id="input-search" placeholder="Search for something..." />
+    </div>
+    <ul class="search-result" id="search-result"></ul>
+    <div class="table-wrapper" id="search-history-wrapper">
+        <table id="search-history" class="search-history" cellspacing="0" cellpadding="0">
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+<script type="text/template" id="history-template">
+    <tr class="row">
+        <td class="name">{{name}}</td>
+        <td class="timestamp">{{timestamp}}</td>
+        <td class="clear-icon"><span onclick="app.removeHistory(event)">x</span></td>
+    </tr>
+</script>
+<script type="text/javascript" src="./index.js"></script>
+
+</html>
